@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DanielFernandoVelazco/static/css/main.0dce7b0f.css",
+    "main.js": "/DanielFernandoVelazco/static/js/main.7c53998c.js",
+    "static/js/453.6bf921a5.chunk.js": "/DanielFernandoVelazco/static/js/453.6bf921a5.chunk.js",
+    "index.html": "/DanielFernandoVelazco/index.html",
+    "main.0dce7b0f.css.map": "/DanielFernandoVelazco/static/css/main.0dce7b0f.css.map",
+    "main.7c53998c.js.map": "/DanielFernandoVelazco/static/js/main.7c53998c.js.map",
+    "453.6bf921a5.chunk.js.map": "/DanielFernandoVelazco/static/js/453.6bf921a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dce7b0f.css",
+    "static/js/main.7c53998c.js"
+  ]
+}

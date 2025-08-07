@@ -1,0 +1,101 @@
+/* Contenido de style/dark-mode.css */
+:root {
+  --primary-color: #19C7B0;
+  --secondary-color: #148399;
+  --text-color: #f0f0f0;
+  --bg-color: #0d0d0d;
+  --card-bg: #1e1e1e;
+  --sidebar-bg: #282828;
+  --border-color: #444;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  color-scheme: dark;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.cv-container {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+}
+
+.sidebar h2,
+.sidebar h3 {
+  color: var(--primary-color);
+}
+
+.sidebar .role {
+  color: var(--text-color);
+}
+
+.sidebar a {
+  color: var(--text-color);
+}
+
+.sidebar h3::after {
+  background: var(--primary-color);
+}
+
+.item:hover {
+  background: rgba(25, 199, 176, 0.15);
+}
+
+.technologies {
+  background: #333;
+  color: var(--primary-color);
+}
+
+.main-content h2 {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.main-content h3 {
+  color: var(--secondary-color);
+}
+
+.role-company {
+  color: #ccc;
+}
+
+.btn.mode-toggle {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.btn.mode-toggle i.fas::before {
+  content: "\f185";
+}
+
+.btn.download-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn.lang-btn {
+  background: #555;
+  color: white;
+}
+
+.skill p span {
+  color: var(--secondary-color);
+}
+
+.bar {
+  background: #444;
+}
+
+.level {
+  background: var(--primary-color);
+}
+
+ul li {
+  color: #ddd;
+}

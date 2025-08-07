@@ -1,3 +1,4 @@
+/* Variables CSS para un mantenimiento más sencillo */
 :root {
   --primary-color: #148399;
   --secondary-color: #19C7B0;
@@ -8,6 +9,7 @@
   --shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Estilos base (Mobile First) */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -17,12 +19,22 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Modificación de la sección de acciones del encabezado */
 .header-actions {
+  /* Alineación de los botones */
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Centra los botones horizontalmente */
   padding: 15px;
   gap: 10px;
   flex-wrap: wrap;
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  
+  /* Posicionamiento fijo */
+  position: sticky; /* Mantiene la barra fija al hacer scroll */
+  top: 0; /* La pega en la parte superior de la pantalla */
+  z-index: 100; /* Asegura que esté por encima de otros elementos */
+  background-color: var(--card-bg); /* Un color de fondo para que no se vea a través */
+  box-shadow: var(--shadow); /* Agrega una sombra para darle profundidad */
 }
 
 .btn {
@@ -35,6 +47,7 @@ body {
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .mode-toggle {
@@ -45,13 +58,11 @@ body {
 .download-btn {
   background: var(--secondary-color);
   color: white;
-  text-decoration: none;
 }
 
 .lang-btn {
   background: #6c757d;
   color: white;
-  text-decoration: none;
 }
 
 .btn:hover {
@@ -61,7 +72,7 @@ body {
 
 .cv-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Por defecto, en columna para móviles */
   max-width: 1200px;
   margin: 20px auto;
   background: var(--card-bg);
@@ -70,36 +81,18 @@ body {
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .cv-container {
-    flex-direction: row;
-  }
-}
-
 .sidebar {
-  width: 100%;
+  width: 100%; /* Por defecto, ocupa todo el ancho */
   background: linear-gradient(to bottom, var(--primary-color), var(--bg-color));
   padding: 30px;
   box-sizing: border-box;
   color: #000;
 }
 
-@media (min-width: 768px) {
-  .sidebar {
-    width: 30%;
-  }
-}
-
 .main-content {
-  width: 100%;
+  width: 100%; /* Por defecto, ocupa todo el ancho */
   padding: 30px;
   box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-  .main-content {
-    width: 70%;
-  }
 }
 
 .profile-pic {
@@ -119,77 +112,6 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Skill bars */
-.skill-bars {
-  margin-top: 20px;
-}
-
-.skill {
-  margin-bottom: 15px;
-}
-
-.skill p {
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.skill p span {
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.bar {
-  height: 8px;
-  background: #e0e0e0;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.level {
-  height: 100%;
-  background: var(--secondary-color);
-  border-radius: 4px;
-}
-
-
-
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
-  color: #333;
-}
-
-.cv-container {
-  display: flex;
-  max-width: 1100px;
-  margin: 20px auto;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 30%;
-  background: linear-gradient(to bottom, #148399, #FFFFFF); /* Degradado a blanco */
-  color: #000; /* Texto en negro para el contraste */
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px;
-}
-
 .contact-info {
   text-align: center;
   margin-bottom: 30px;
@@ -205,14 +127,14 @@ body {
   font-weight: bold;
   font-style: italic;
   margin-top: 5px;
-  color: #002244; /* Un azul oscuro para resaltar */
+  color: #002244;
 }
 
 .sidebar h3 {
   font-size: 1.2em;
   margin-top: 25px;
   margin-bottom: 10px;
-  border-bottom: 2px solid #000; /* Borde del título en negro */
+  border-bottom: 2px solid #000;
   padding-bottom: 5px;
 }
 
@@ -227,18 +149,12 @@ body {
 }
 
 .sidebar a {
-  color: #000; /* Enlaces en negro */
+  color: #000;
   text-decoration: none;
 }
 
 .sidebar a:hover {
   text-decoration: underline;
-}
-
-.main-content {
-  width: 70%;
-  padding: 30px;
-  box-sizing: border-box;
 }
 
 .main-content section {
@@ -248,7 +164,7 @@ body {
 .main-content h2 {
   font-size: 1.8em;
   color: #002244;
-  border-bottom: 2px solid #19C7B0; /* Borde del título */
+  border-bottom: 2px solid var(--secondary-color);
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
@@ -285,4 +201,52 @@ body {
 
 .item ul li {
   margin-bottom: 5px;
+}
+
+/* Barras de habilidad */
+.skill-bars {
+  margin-top: 20px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill p span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.level {
+  height: 100%;
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+/* Media Query para tablets y escritorio */
+@media (min-width: 768px) {
+  .cv-container {
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+
+  .sidebar {
+    width: 30%; /* Ocupa el 30% del ancho */
+  }
+
+  .main-content {
+    width: 70%; /* Ocupa el 70% del ancho */
+  }
 }

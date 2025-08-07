@@ -1,3 +1,160 @@
+:root {
+  --primary-color: #148399;
+  --secondary-color: #19C7B0;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+  --card-bg: #fff;
+  --border-color: #eee;
+  --shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle {
+  background: var(--primary-color);
+  color: white;
+}
+
+.download-btn {
+  background: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.lang-btn {
+  background: #6c757d;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .cv-container {
+    flex-direction: row;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--primary-color), var(--bg-color));
+  padding: 30px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+
+.main-content {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    width: 70%;
+  }
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.8);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Skill bars */
+.skill-bars {
+  margin-top: 20px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill p span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.level {
+  height: 100%;
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;

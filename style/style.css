@@ -6,7 +6,7 @@
   --bg-color: #f8f9fa;
   --card-bg: #fff;
   --border-color: #eee;
-  --shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos base (Mobile First) */
@@ -23,18 +23,25 @@ body {
 .header-actions {
   /* Alineación de los botones */
   display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
+  justify-content: center;
+  /* Centra los botones horizontalmente */
   padding: 15px;
   gap: 10px;
   flex-wrap: wrap;
-  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
-  
+  width: 100%;
+  /* Asegura que ocupe todo el ancho de la pantalla */
+
   /* Posicionamiento fijo */
-  position: sticky; /* Mantiene la barra fija al hacer scroll */
-  top: 0; /* La pega en la parte superior de la pantalla */
-  z-index: 100; /* Asegura que esté por encima de otros elementos */
-  background-color: var(--card-bg); /* Un color de fondo para que no se vea a través */
-  box-shadow: var(--shadow); /* Agrega una sombra para darle profundidad */
+  position: sticky;
+  /* Mantiene la barra fija al hacer scroll */
+  top: 0;
+  /* La pega en la parte superior de la pantalla */
+  z-index: 100;
+  /* Asegura que esté por encima de otros elementos */
+  background-color: var(--card-bg);
+  /* Un color de fondo para que no se vea a través */
+  box-shadow: var(--shadow);
+  /* Agrega una sombra para darle profundidad */
 }
 
 .btn {
@@ -50,11 +57,6 @@ body {
   text-decoration: none;
 }
 
-.mode-toggle {
-  background: var(--primary-color);
-  color: white;
-}
-
 .download-btn {
   background: var(--secondary-color);
   color: white;
@@ -67,12 +69,13 @@ body {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cv-container {
   display: flex;
-  flex-direction: column; /* Por defecto, en columna para móviles */
+  flex-direction: column;
+  /* Por defecto, en columna para móviles */
   max-width: 1200px;
   margin: 20px auto;
   background: var(--card-bg);
@@ -82,7 +85,8 @@ body {
 }
 
 .sidebar {
-  width: 100%; /* Por defecto, ocupa todo el ancho */
+  width: 100%;
+  /* Por defecto, ocupa todo el ancho */
   background: linear-gradient(to bottom, var(--primary-color), var(--bg-color));
   padding: 30px;
   box-sizing: border-box;
@@ -90,7 +94,8 @@ body {
 }
 
 .main-content {
-  width: 100%; /* Por defecto, ocupa todo el ancho */
+  width: 100%;
+  /* Por defecto, ocupa todo el ancho */
   padding: 30px;
   box-sizing: border-box;
 }
@@ -99,17 +104,17 @@ body {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.8);
+  border: 5px solid rgba(255, 255, 255, 0.8);
   object-fit: cover;
   display: block;
   margin: 0 auto 25px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .profile-pic:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .contact-info {
@@ -239,14 +244,166 @@ body {
 /* Media Query para tablets y escritorio */
 @media (min-width: 768px) {
   .cv-container {
-    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+    flex-direction: row;
+    /* Cambia a fila para pantallas más grandes */
   }
 
   .sidebar {
-    width: 30%; /* Ocupa el 30% del ancho */
+    width: 30%;
+    /* Ocupa el 30% del ancho */
   }
 
   .main-content {
-    width: 70%; /* Ocupa el 70% del ancho */
+    width: 70%;
+    /* Ocupa el 70% del ancho */
   }
+}
+
+/* Estilo moderno para el toggle switch */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 12px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.slider i {
+  color: white;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.light-icon {
+  opacity: 0;
+}
+
+.dark-icon {
+  opacity: 1;
+}
+
+.toggle-label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Estado "ON" (dark mode activado) */
+.toggle-switch input:checked+.slider {
+  background: var(--secondary-color);
+  justify-content: flex-end;
+}
+
+.toggle-switch input:checked+.slider .light-icon {
+  opacity: 1;
+}
+
+.toggle-switch input:checked+.slider .dark-icon {
+  opacity: 0;
+}
+
+.toggle-switch:hover {
+  background: rgba(25, 199, 176, 0.1);
+}
+
+/* Dropdown de idioma (click) */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  /* Misma altura que otros botones */
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: var(--shadow);
+  /* Mismo color que el botón de modo */
+  color: var(--text-color);
+  border: var(--primary-color) solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: var(--secondary-color);
+  /* Color hover igual al botón de modo */
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flag-icon {
+  font-size: 18px;
+  /* Tamaño de banderas/globo */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card-bg);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 5px;
+  width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(25, 199, 176, 0.1);
+}
+
+/* Flecha animada */
+.lang-btn i.fa-chevron-down {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.language-dropdown.active .lang-btn i.fa-chevron-down {
+  transform: rotate(180deg);
 }

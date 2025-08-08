@@ -65,22 +65,12 @@ body {
   color: #ccc;
 }
 
-.btn.mode-toggle {
-  background: var(--secondary-color);
-  color: white;
-}
-
 .btn.mode-toggle i.fas::before {
   content: "\f185";
 }
 
 .btn.download-btn {
   background: var(--primary-color);
-  color: white;
-}
-
-.btn.lang-btn {
-  background: #555;
   color: white;
 }
 
@@ -98,4 +88,29 @@ body {
 
 ul li {
   color: #ddd;
+}
+
+.toggle-switch {
+  border-color: var(--secondary-color);
+}
+
+.toggle-switch:hover {
+  background: rgba(20, 131, 153, 0.1);
+}
+
+.toggle-label {
+  color: var(--text-color);
+}
+
+.dropdown-menu {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dropdown-menu li a {
+  color: var(--text-color);
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(20, 131, 153, 0.1);
 }
